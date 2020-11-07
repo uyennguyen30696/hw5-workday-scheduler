@@ -1,3 +1,14 @@
+// Get all variable from html
+var am9El = document.getElementById("9am");
+var am10El = document.getElementById("10am");
+var am11El = document.getElementById("11am");
+var pm12El = document.getElementById("12pm");
+var pm13El = document.getElementById("13pm");
+var pm14El = document.getElementById("14pm");
+var pm15El = document.getElementById("15pm");
+var pm16El = document.getElementById("16pm");
+var pm17El = document.getElementById("17pm");
+
 // Current date time
 var now = luxon.DateTime.local().toLocaleString(
     {
@@ -7,10 +18,20 @@ var now = luxon.DateTime.local().toLocaleString(
         hour: 'numeric',
         minute: '2-digit'
     });
-
 // Display current date time in the header
 $("#currentDay").text(now);
 
+// Get current time
+
+var currentTime = luxon.DateTime.local().toFormat("HH mm")
+console.log(currentTime)
+
+// If none 24 hour clock format, use this
+// .toLocaleString(
+//     {
+//         hour: 'numeric',
+//         minute: '2-digit'
+//     });
 
 // Save button to save user input in local storage
 $(".save-button").on("click", function (event) {
@@ -28,11 +49,11 @@ $("#9 textarea").val(localStorage.getItem("9"));
 $("#10 textarea").val(localStorage.getItem("10"));
 $("#11 textarea").val(localStorage.getItem("11"));
 $("#12 textarea").val(localStorage.getItem("12"));
-$("#1 textarea").val(localStorage.getItem("1"));
-$("#2 textarea").val(localStorage.getItem("2"));
-$("#3 textarea").val(localStorage.getItem("3"));
-$("#4 textarea").val(localStorage.getItem("4"));
-$("#5 textarea").val(localStorage.getItem("5"));
+$("#13 textarea").val(localStorage.getItem("13"));
+$("#14 textarea").val(localStorage.getItem("14"));
+$("#15 textarea").val(localStorage.getItem("15"));
+$("#16 textarea").val(localStorage.getItem("16"));
+$("#17 textarea").val(localStorage.getItem("17"));
 
 // Clear data and display in each time slot
 $("#clear-9").on("click", function (event) {
@@ -47,59 +68,137 @@ $("#clear-10").on("click", function (event) {
 });
 $("#clear-11").on("click", function (event) {
     event.preventDefault();
-    $("#11 textarea").val(localStorage.removeItem("11"));
-    $("#11 textarea").text("");
+    $("#11am").val(localStorage.removeItem("11"));
+    $("#11am").text("");
 });
 $("#clear-12").on("click", function (event) {
     event.preventDefault();
-    $("#12 textarea").val(localStorage.removeItem("12"));
-    $("#12 textarea").text("");
+    $("#12pm").val(localStorage.removeItem("12"));
+    $("#12pm").text("");
 });
-$("#clear-1").on("click", function (event) {
+$("#clear-13").on("click", function (event) {
     event.preventDefault();
-    $("#1 textarea").val(localStorage.removeItem("1"));
-    $("#1 textarea").text("");
+    $("#13pm").val(localStorage.removeItem("13"));
+    $("#13pm").text("");
 });
-$("#clear-2").on("click", function (event) {
+$("#clear-14").on("click", function (event) {
     event.preventDefault();
-    $("#2 textarea").val(localStorage.removeItem("2"));
-    $("#2 textarea").val("");
+    $("#14pm").val(localStorage.removeItem("14"));
+    $("#14pm").val("");
 });
-$("#clear-3").on("click", function (event) {
+$("#clear-15").on("click", function (event) {
     event.preventDefault();
-    $("#3 textarea").val(localStorage.removeItem("3"));
-    $("#3 textarea").text("");
+    $("#15pm").val(localStorage.removeItem("15"));
+    $("#15pm").text("");
 });
-$("#clear-4").on("click", function (event) {
+$("#clear-16").on("click", function (event) {
     event.preventDefault();
-    $("#4 textarea").val(localStorage.removeItem("4"));
-    $("#4 textarea").text("");
+    $("#16pm").val(localStorage.removeItem("16"));
+    $("#16pm").text("");
 });
-$("#clear-5").on("click", function (event) {
+$("#clear-17").on("click", function (event) {
     event.preventDefault();
-    $("#5 textarea").val(localStorage.removeItem("5"));
-    $("#5 textarea").text("");
+    $("#17pm").val(localStorage.removeItem("17"));
+    $("#17pm").text("");
 });
 
-// Get current time
-var currentTime = luxon.DateTime.local().toLocaleString(
-    {
-        hour: 'numeric',
-        minute: '2-digit'
-    });
-console.log(currentTime)
-
-let timeslotEl = document.getElementsByTagName("#id")
-let timeslot = parseInt(timeslotEl);
-console.log(timeslot)
-
-// Change color to distinguish past, present, and future time
-/* if (timeslot < currentTime) {
-    backgournd
+console.log(parseInt(currentTime))
+// Change color to distinguish past, present, and future time for each time slot
+// 9am
+if (parseInt(currentTime) > 9) {
+    am9El.setAttribute("class", "past");
 }
-else if (timeslot > currentTime) {
-
+else if (parseInt(currentTime) < 9) {
+    am9El.setAttribute("class", "future");
 }
-else {
+else if (parseInt(currentTime) === 9) {
+    am9El.setAttribute("class", "present");
+}
 
-} */
+// 10am
+if (parseInt(currentTime) > 10) {
+    am10El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 10) {
+    am10El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 10) {
+    am10El.setAttribute("class", "present");
+}
+
+// 11am
+if (parseInt(currentTime) > 11) {
+    am11El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 11) {
+    am11El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 11) {
+    am11El.setAttribute("class", "present");
+}
+
+// 12pm
+if (parseInt(currentTime) > 12) {
+    pm12El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 12) {
+    pm12El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 12) {
+    pm12El.setAttribute("class", "present");
+}
+
+// 13pm
+if (parseInt(currentTime) > 13) {
+    pm13El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 13) {
+    pm13El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 13) {
+    pm13El.setAttribute("class", "present");
+}
+
+// 14pm
+if (parseInt(currentTime) > 14) {
+    pm14El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 14) {
+    pm14El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 14) {
+    pm14El.setAttribute("class", "present");
+}
+
+// 15pm
+if (parseInt(currentTime) > 15) {
+    pm15El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 15) {
+    pm15El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 15) {
+    pm15El.setAttribute("class", "present");
+}
+
+// 16pm
+if (parseInt(currentTime) > 16) {
+    pm16El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 16) {
+    pm16El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 16) {
+    pm16El.setAttribute("class", "present");
+}
+
+// 17pm
+if (parseInt(currentTime) > 17) {
+    pm17El.setAttribute("class", "past");
+}
+else if (parseInt(currentTime) < 17) {
+    pm17El.setAttribute("class", "future");
+}
+else if (parseInt(currentTime) === 17) {
+    pm17El.setAttribute("class", "present");
+}
