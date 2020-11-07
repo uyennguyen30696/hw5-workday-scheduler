@@ -21,6 +21,10 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+.container {
+  padding-bottom: 50px;
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;
@@ -30,9 +34,6 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-}
-
-.hour {
   position: absolute;
   float: left;
 }
