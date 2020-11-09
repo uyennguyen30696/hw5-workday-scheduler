@@ -110,9 +110,11 @@ if (parseInt(currentTime) > 9) {
 }
 else if (parseInt(currentTime) < 9) {
     am9El.setAttribute("class", "future");
+    am9El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 9) {
     am9El.setAttribute("class", "present");
+    am9El.removeAttribute("disabled");
 }
 
 // 10am
@@ -121,9 +123,11 @@ if (parseInt(currentTime) > 10) {
 }
 else if (parseInt(currentTime) < 10) {
     am10El.setAttribute("class", "future");
+    am10El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 10) {
     am10El.setAttribute("class", "present");
+    am10El.removeAttribute("disabled");
 }
 
 // 11am
@@ -132,9 +136,11 @@ if (parseInt(currentTime) > 11) {
 }
 else if (parseInt(currentTime) < 11) {
     am11El.setAttribute("class", "future");
+    am11El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 11) {
     am11El.setAttribute("class", "present");
+    am11El.removeAttribute("disabled");
 }
 
 // 12pm
@@ -143,9 +149,11 @@ if (parseInt(currentTime) > 12) {
 }
 else if (parseInt(currentTime) < 12) {
     pm12El.setAttribute("class", "future");
+    pm12El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 12) {
     pm12El.setAttribute("class", "present");
+    pm12El.removeAttribute("disabled");
 }
 
 // 13pm
@@ -154,9 +162,11 @@ if (parseInt(currentTime) > 13) {
 }
 else if (parseInt(currentTime) < 13) {
     pm13El.setAttribute("class", "future");
+    pm13El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 13) {
     pm13El.setAttribute("class", "present");
+    pm13El.removeAttribute("disabled");
 }
 
 // 14pm
@@ -165,9 +175,11 @@ if (parseInt(currentTime) > 14) {
 }
 else if (parseInt(currentTime) < 14) {
     pm14El.setAttribute("class", "future");
+    pm14El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 14) {
     pm14El.setAttribute("class", "present");
+    pm14El.removeAttribute("disabled");
 }
 
 // 15pm
@@ -176,9 +188,11 @@ if (parseInt(currentTime) > 15) {
 }
 else if (parseInt(currentTime) < 15) {
     pm15El.setAttribute("class", "future");
+    pm15El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 15) {
     pm15El.setAttribute("class", "present");
+    pm15El.removeAttribute("disabled");
 }
 
 // 16pm
@@ -187,9 +201,11 @@ if (parseInt(currentTime) > 16) {
 }
 else if (parseInt(currentTime) < 16) {
     pm16El.setAttribute("class", "future");
+    pm16El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 16) {
     pm16El.setAttribute("class", "present");
+    pm16El.removeAttribute("disabled");
 }
 
 // 17pm
@@ -198,7 +214,10 @@ if (parseInt(currentTime) > 17) {
 }
 else if (parseInt(currentTime) < 17) {
     pm17El.setAttribute("class", "future");
+    pm17El.removeAttribute("disabled");
 }
 else if (parseInt(currentTime) === 17) {
     pm17El.setAttribute("class", "present");
+    pm17El.removeAttribute("disabled");
+
 }
