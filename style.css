@@ -110,7 +110,7 @@ img {
   }
 }
 
-@media (max-width: 365px) {
+@media (max-width: 500px) {
   .display-3 {
     font-size: 3em !important;
   }
@@ -118,7 +118,7 @@ img {
   .container {
     padding: 0;
     padding-bottom: 50px;;
-    width: 320px;
+    /* width: 320px; */
   }
 
   textarea {
@@ -136,10 +136,11 @@ img {
   }
   
   .clear-button {
-    position: relative;
+    /* position: relative;
     right: -25px; 
     bottom: 12px;
     padding: 2px;
-    padding-bottom: 6px !important; 
+    padding-bottom: 6px !important;  */
+    display: none;
   }
 } 
