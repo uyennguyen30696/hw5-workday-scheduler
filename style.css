@@ -1,16 +1,14 @@
+header {
+  background-color: rgba(0,0,0,0.20) !important;
+} 
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  background-image: url('./images/pexels-jess-bailey-designs-1007025.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbotron {
@@ -27,23 +25,46 @@ textarea {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  border-radius: 15px; 
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  margin-top: 10px;
   position: absolute;
   float: left;
 }
 
 .input {
   background-color: #EAE2B7;
+}
+
+textarea {
+  position: relative;
+  top: 10px;
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
   width: 70%;
 }
-.clear-button {
+
+.save-button {
+  position: relative;
+  bottom: 12px;
+  margin-left: 5px;
   padding: 3px;
+}
+
+.clear-button {
+  position: relative;
+  bottom: 12px;
+  padding: 4px;
+  padding-bottom: 7px; 
 }
 
 img {
@@ -54,18 +75,71 @@ img {
 .past{
   background-color: #ADADAD;
   color: white;
-  width: 70%;
 }
 
 .present {
   background-color: #EB5C68;
   color: white;
-  width: 70%;
 }
 
 .future {
   background-color:#026AF2;
   color: white;
-  width: 70%;
 }
 
+@media (max-width: 800px) { 
+  textarea {
+    position: relative;
+    right: -30px;
+    width: 65%; 
+  }
+  .save-button {
+    position: relative;
+    right: -30px; 
+    bottom: 12px;
+    margin-left: 0 !important;
+    padding: 2px;
+  }
+  
+  .clear-button {
+    position: relative;
+    right: -30px; 
+    bottom: 12px;
+    padding: 2px;
+    padding-bottom: 6px !important; 
+  }
+}
+
+@media (max-width: 365px) {
+  .display-3 {
+    font-size: 3em !important;
+  }
+
+  .container {
+    padding: 0;
+    padding-bottom: 50px;;
+    width: 320px;
+  }
+
+  textarea {
+    position: relative;
+    right: -30px;
+    width: 62%;
+  }
+
+  .save-button {
+    position: relative;
+    right: -28px; 
+    bottom: 12px;
+    margin-left: 0 !important;
+    padding: 2px;
+  }
+  
+  .clear-button {
+    position: relative;
+    right: -25px; 
+    bottom: 12px;
+    padding: 2px;
+    padding-bottom: 6px !important; 
+  }
+} 
