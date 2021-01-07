@@ -4,10 +4,11 @@
 ## Description
 
 This is a simple calendar application that allows user to save events for each hour of the work day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-## Your Task
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+<br>
 The library [Luxon](https://moment.github.io/luxon/) is used to work with dates and times.
+<br>Check out the deployed link [here](https://uyennguyen30696.github.io/hw5-workday-scheduler/).
+
+![screenshot](./images/screenshot.png)
 
 ## User Story
 
