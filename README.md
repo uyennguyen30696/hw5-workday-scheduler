@@ -1,4 +1,4 @@
-# Third-Party APIs: Work Day Scheduler
+# 05 Third-Party APIs: Work Day Scheduler
 
 
 ## Description
@@ -6,7 +6,7 @@
 This is a simple calendar application that allows user to save events for each hour of the work day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 <br>
 The library [Luxon](https://moment.github.io/luxon/) is used to work with dates and times.
-<br>Check out the deployed link [here](https://uyennguyen30696.github.io/hw5-workday-scheduler/).
+<br>Check out the deployed link [here](https://uyennguyen30696.github.io/workday-tracker/).
 
 ![screenshot](./images/screenshot.png)
 
